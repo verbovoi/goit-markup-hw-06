@@ -42,7 +42,30 @@
     <section class="hero">
         <div class="container">
         <h1 class="title">эффективные решения для вашего бизнеса</h1>
-        <a href="" class="button">Заказать услугу</a>
+        <button class="button" data-modal-open>Заказать услугу</button>
+        <div class="backdrop" data-modal>
+            <div class="modal">
+                <button class="modal-close-button" data-modal-close>
+                    <img src="./img/close.svg" alt="Кнопка закрыть">                                 
+                </button>
+                <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+                <form action="" class="js-contact-form">
+                    <label for="user"></label>
+                    <input type="text" name="user-name" id="user" class="contact-info">
+                    <label for="phone"></label>
+                    <input type="tel" name="phone" id="phone" class="contact-info">
+                    <label for="mail"></label>
+                    <input type="email" name="email" id="mail" class="contact-info">
+                    <label for="comment"></label>
+                    <textarea name="comment" id="comment" rows="10" class="comment-area"></textarea>
+                    <div role="group" class="checkbox">
+                        <input type="checkbox" name="subscribe" id="subscribe">
+                        <label for="subscribe">Согласен с рассылкой и принимаю <a href="">Условия договора</a></label>
+                    </div>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
         </div>
     </section>
     <!--Наши Преимущества-->
@@ -204,5 +227,21 @@
         </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
+    <script>
+        (() => {
+          document
+            .querySelector('.js-contact-form')
+            .addEventListener('submit', e => {
+              e.preventDefault();
+  
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`),
+              );
+  
+              e.currentTarget.reset();
+            });
+        })();
+      </script>
 </body>
 </html>
