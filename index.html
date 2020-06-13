@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -49,15 +50,32 @@
                     <img src="./img/close.svg" alt="Кнопка закрыть">                                 
                 </button>
                 <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
-                <form action="" class="js-contact-form">
-                    <label for="user"></label>
-                    <input type="text" name="user-name" id="user" class="contact-info">
-                    <label for="phone"></label>
-                    <input type="tel" name="phone" id="phone" class="contact-info">
-                    <label for="mail"></label>
-                    <input type="email" name="email" id="mail" class="contact-info">
-                    <label for="comment"></label>
-                    <textarea name="comment" id="comment" rows="10" class="comment-area"></textarea>
+                <form action="" class="js-contact-form" autocomplete="off">
+                    <div class="form-field">
+                        <input type="text" name="user-name" id="user" placeholder=" " class="form-input">
+                        <label for="user" class="form-label">Имя</label>
+                        <svg class="form-icon" width="12" height="12">
+                            <use href="./img/modal-icons.svg#name"></use>
+                        </svg>
+                    </div>  
+                    <div class="form-field">
+                        <input type="tel" name="phone" id="phone" placeholder=" " class="form-input">
+                        <label for="phone" class="form-label">Телефон</label>
+                        <svg class="form-icon" width="13" height="13">
+                            <use href="./img/modal-icons.svg#telephone"></use>
+                        </svg>
+                    </div>
+                    <div class="form-field">
+                        <input type="email" name="email" id="mail" placeholder=" " class="form-input">
+                        <label for="mail" class="form-label">Почта</label>
+                        <svg class="form-icon" width="15" height="12">
+                            <use href="./img/modal-icons.svg#mail"></use>
+                        </svg>
+                    </div>
+                    <div class="text-field">
+                        <textarea name="comment" id="comment" rows="10" class="comment-area" placeholder=" "></textarea>
+                        <label for="comment" class="comment-label">Комментарий</label>
+                    </div>    
                     <div role="group" class="checkbox">
                         <input type="checkbox" name="subscribe" id="subscribe">
                         <label for="subscribe">Согласен с рассылкой и принимаю <a href="">Условия договора</a></label>
