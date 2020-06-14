@@ -77,10 +77,12 @@
                         <label for="comment" class="comment-label">Комментарий</label>
                     </div>    
                     <div role="group" class="checkbox">
-                        <input type="checkbox" name="subscribe" id="subscribe">
-                        <label for="subscribe">Согласен с рассылкой и принимаю <a href="">Условия договора</a></label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="checkbox-input" name="policy">
+                            <span class="checkbox-icon"></span>
+                            Соглашаюсь с рассылкой и принимаю<a href="" class="checkbox-link">Условия договора</a></label>
                     </div>
-                    <button type="submit">Отправить</button>
+                    <button type="submit" class="submit" >Отправить</button>
                 </form>
             </div>
         </div>
@@ -234,10 +236,10 @@
             </div>
             <div class="subscribe-conteiner">
                 <p class="follow">Подпишитесь на рассылку</p>
-                <div class="subscribe-form">
-                    <div class="email-form">E-mail</div>
-                    <button type="button" class="button">Подписаться <svg class="subscribe-icon" width="24" height="24"><use href="./img/sprite.svg#icon-send"></use></svg></button>
-                </div>    
+                <form action="" class="subscribe-form">
+                    <input type="mail" class="email-form" placeholder="E-mail"> 
+                    <button type="submit" class="button">Подписаться <svg class="subscribe-icon" width="24" height="24"><use href="./img/sprite.svg#icon-send"></use></svg></button>
+                </form>   
             </div>
         </div>
         <div class="copy-block">

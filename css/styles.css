@@ -247,6 +247,7 @@ h1, h2, h3, h4, h5, h6, p{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 2;
+    transition: opacity 250ms ease;
 }
 
 .backdrop.is-hidden{
@@ -393,6 +394,61 @@ h1, h2, h3, h4, h5, h6, p{
 .checkbox{
     margin-bottom: 30px;
 }
+
+.checkbox-input{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    position: absolute;
+}
+
+.checkbox-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.checkbox-icon{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 2px;    
+}
+
+.checkbox-input:checked ~ .checkbox-icon{
+    background-color: var(--hover-color);
+    background-image: url(../img/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--hover-color);
+}
+
+.checkbox-link{
+    color: var(--hover-color);
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.submit{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 10px 55px;
+    background-color: var(--hover-color);
+
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--background-primary);
+}
+
 
 
 /* Наши преимущества */
@@ -787,9 +843,11 @@ h1, h2, h3, h4, h5, h6, p{
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     padding-left: 12px;
+    background-color: var(--footer-background-site);
 
     font-size: 16px;
     line-height: 1.83;
+    color: var(--background-primary);
 }
 
 .footer .button{
